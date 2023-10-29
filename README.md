@@ -11,11 +11,11 @@ rmd 폴더 안의 .rmd 파일은 레포트 작성을 위한 R Markdowm 파일이
 
 ------------
 
-This is a report for a data visualization.
-Used R to analyze data and presented it in tables, graphs, and writing.
-Using R in R studio, I plotted a graph the airplane data and the car data to see the relationship between the variables.
-Changed colors and repositioned legends to make the graphs more effective.
-
-The PDF file was created by importing the .rmd file in the rmd folder.
-
-The .rmd files in the rmd folder are R Markdowm files for creating reports.
+This is a report for a data visualization.  
+Used R to analyze data and presented it in tables, graphs, and writing.  
+Using R in R studio, I plotted a graph the airplane data and the car data to see the relationship between the variables.  
+Changed colors and repositioned legends to make the graphs more effective.  
+  
+The PDF file was created by importing the .rmd file in the rmd folder.  
+  
+The .rmd files in the rmd folder are R Markdowm files for creating reports.  
