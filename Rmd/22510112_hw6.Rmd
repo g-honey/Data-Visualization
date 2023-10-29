@@ -1,0 +1,85 @@
+---
+# title: "essay, one-paged-note, homework"
+# subtitle: "subtitle"
+# author: "심민규 `mksim@seoultech.ac.kr`"
+# date: "Lastly updated on `r Sys.Date()`"
+output:
+  pdf_document:
+    latex_engine: xelatex
+    highlight: haddock
+    keep_tex: yes
+    includes:
+      in_header: latex_support/latex-topmatter_pdf.tex
+    # toc: yes # table of contents yes/no/True/False
+    # toc_depth: 2 # toc depth 1 or 2 recommended
+    number_sections: yes # yes/no/True/False
+  html_document:
+    toc: yes
+    toc_depth: '1'
+    df_print: paged
+monofont: Courier New # Consolas or Courier New
+smaller: yes
+classoption: a4paper # letter or a4paper
+header-includes:
+- \usepackage{tikz}
+- \usepackage{pgfplots}
+- \pgfplotsset{compat=1.17}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(message = FALSE)
+knitr::opts_chunk$set(warning = FALSE)
+```
+
+<!-- \begin{center} -->
+<!-- \vspace{100pt} -->
+<!-- \includegraphics[height=0.3in]{latex_support/logo_ds.png}  -->
+<!-- \end{center} -->
+
+\begin{center}
+\begin{Large}
+실린더 개수에 따른 연비의 분포\\
+\end{Large}
+\begin{large}
+자동차 종류마다 알아보자
+\end{large}
+\end{center}
+  
+\ 자동차 엔진 실린더 개수에 따른 고속도로 연비는 [그림2]의 그래프가 가장 좋다.
+
+
+```{r, out.height="22%", out.width="100%", fig.align="center"}
+knitr::include_graphics("221112_hw6_4_2.jpg")
+```
+\ 위의 그래프는 실런더 개수에 다른 고속도로 연비를 산점도로 표현한 그래프이다.  
+\ 엔진 실린더는 기통이라고 불린다. 실린더는 엔진 내에서 연료를 이용해 피스톤 운동 기능을 수행한다. 실린더 개수가 높을수록 성능이 우수하지만 엔진이 무거워 연비 효율은 떨어진다.  
+
+
+\ [그림1]의 문제점은 어떤 자동차의 실린더 개수에 따른 고속도로 연비인지 알 수 없다는 것이다. 또한 그래프 안의 점이 겹쳐 점의 개수를 인식할 수 없다는 점이다. 
+```{r, out.height="32%", out.width="100%", fig.align="center"}
+knitr::include_graphics("221112_hw6_26.jpg")
+```
+  
+ \ [그림1]의 그래프에 흑백 프린트를 고려 해 모양을 지정하면 SUV가 그래프에 나트나지 않는다. SUV를 나타내기 위해 분할 배열을 실시한 그래프는 [그림2]이다.
+ \ 따라서 [그림1]보다 좋은 그래프는 [그림2]이다.  
+ .ㅤ\   ∧＿∧  
+　(　・ω・ )  
+　(　つ┳⊃  
+ε \  (\_)へ^(\_)  
+ (　　(　•̀o•)  달려달려  
+ ◎―◎ \ \ \ \ \> \ >    
+  
+
+
+
+
+\newpage
+
+```{r, echo=TRUE, results='hide'}
+"Written by Choi, Ji-Hyeon"
+```
+
+```{r, out.height="10%", out.width="15%", fig.align="left"}
+knitr::include_graphics("bed.jpg")
+```

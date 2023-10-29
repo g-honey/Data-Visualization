@@ -1,0 +1,75 @@
+---
+# title: "essay, one-paged-note, homework"
+# subtitle: "subtitle"
+# author: "심민규 `mksim@seoultech.ac.kr`"
+# date: "Lastly updated on `r Sys.Date()`"
+output:
+  pdf_document:
+    latex_engine: xelatex
+    highlight: haddock
+    keep_tex: yes
+    includes:
+      in_header: latex_support/latex-topmatter_pdf.tex
+    # toc: yes # table of contents yes/no/True/False
+    # toc_depth: 2 # toc depth 1 or 2 recommended
+    number_sections: yes # yes/no/True/False
+  html_document:
+    toc: yes
+    toc_depth: '1'
+    df_print: paged
+monofont: Courier New # Consolas or Courier New
+smaller: yes
+classoption: a4paper # letter or a4paper
+header-includes:
+- \usepackage{tikz}
+- \usepackage{pgfplots}
+- \pgfplotsset{compat=1.17}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(message = FALSE)
+knitr::opts_chunk$set(warning = FALSE)
+```
+
+<!-- \begin{center} -->
+<!-- \vspace{100pt} -->
+<!-- \includegraphics[height=0.3in]{latex_support/logo_ds.png}  -->
+<!-- \end{center} -->
+
+\begin{center}
+\begin{Large}
+연비는 정규분포와 유사할까?\\
+\end{Large}
+\begin{large}
+히스토그램의 구간을 바꿨을 때의 변화
+\end{large}
+\end{center}
+
+\ 연비(hwy) 변수는 **정규분포와 유사하다고 주장할 수 없다.** 히스토그램 위에 정규분포를 그렸을 때 정규분포와 유사한 것처럼 보이지만, 커널밀도함수를 그렸을 때 다른 분포를 보이고 있기 때문이다. 정규분포와 유사하다면 커널밀도도 정규분포와 유사해야하는데 그렇지 않다. 
+
+
+```{r, out.height="25%", out.width="94%", fig.align="center"}
+knitr::include_graphics("221119_hw8_16.jpg")
+```
+\ [그림 1]과 [그림 2]는 연비에 대한 히스토그램을 구간을 10과 25로 바꾸었을 때 그림이다.  
+
+```{r, out.height="30%", out.width="95%", fig.align="center"}
+knitr::include_graphics("221119_hw8_17.jpg")
+```
+\ [그림 3]과 [그림 4]는 [그림 1]과 [그림 2]에 정규분포 그래프를 그린 모습이다. 
+```{r, out.height="30%", out.width="95%", fig.align="center"}
+knitr::include_graphics("221119_hw8_19.jpg")
+```
+ \ [그림 5]와 [그림 6]은 [그림 1]과 [그림 2]에 커널밀도함수를 그린 모습이다. 커널밀도와 정규분포가 유사한 모습을 보이지 않으므로 **연비는 정규분포와 유사하지 않다.**
+
+
+\newpage
+
+```{r, echo=TRUE, results='hide'}
+"Written by Choi, Ji-Hyeon"
+```
+
+```{r, out.height="10%", out.width="15%", fig.align="left"}
+knitr::include_graphics("bed.jpg")
+```

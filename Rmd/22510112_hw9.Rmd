@@ -1,0 +1,88 @@
+---
+# title: "essay, one-paged-note, homework"
+# subtitle: "subtitle"
+# author: "심민규 `mksim@seoultech.ac.kr`"
+# date: "Lastly updated on `r Sys.Date()`"
+output:
+  pdf_document:
+    latex_engine: xelatex
+    highlight: haddock
+    keep_tex: yes
+    includes:
+      in_header: latex_support/latex-topmatter_pdf.tex
+    # toc: yes # table of contents yes/no/True/False
+    # toc_depth: 2 # toc depth 1 or 2 recommended
+    number_sections: yes # yes/no/True/False
+  html_document:
+    toc: yes
+    toc_depth: '1'
+    df_print: paged
+monofont: Courier New # Consolas or Courier New
+smaller: yes
+classoption: a4paper # letter or a4paper
+header-includes:
+- \usepackage{tikz}
+- \usepackage{pgfplots}
+- \pgfplotsset{compat=1.17}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(message = FALSE)
+knitr::opts_chunk$set(warning = FALSE)
+```
+
+<!-- \begin{center} -->
+<!-- \vspace{100pt} -->
+<!-- \includegraphics[height=0.3in]{latex_support/logo_ds.png}  -->
+<!-- \end{center} -->
+
+\begin{center}
+\begin{Large}
+그래프를 바꿔보자\\
+\end{Large}
+\begin{large}
+그래프의 색 변화와 범례의 반전
+\end{large}
+\end{center}
+
+\ 원래 그래프인 [그림 1]에서 **살인율이 높은 주가 짙은 빨간색으로 표현한 그래프는 [그림 2] 같이 표현된다.**
+
+```{r, out.height="30%", out.width="95%", fig.align="center"}
+knitr::include_graphics("221119_hw9_5.jpg")
+```
+
+
+```{r, out.height="30%", out.width="95%", fig.align="center"}
+knitr::include_graphics("221119_hw9_4.jpg")
+```
+
+
+
+ \ 교수님이 살았던 주는 살인율이 높았다고 한다.    
+   
+   
+   
+     
+ 
+ 　　　|　　　에에-　　　　　|  
+　　　＼　　　증말~?　　　/  
+　　　　￣￣￣￣∨￣￣￣￣￣    
+　　　　　　　。  
+　　　∧,\  ∧　.?　  
+|￣￣( ´Д｀)￣|  
+|＼￣￣￣￣￣￣＼  
+|　 ＼\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ＼  
+＼　｜￣￣￣￣￣￣￣|  
+　 ＼|＿＿＿＿＿＿＿_|
+
+
+\newpage
+
+```{r, echo=TRUE, results='hide'}
+"Written by Choi, Ji-Hyeon"
+```
+
+```{r, out.height="10%", out.width="15%", fig.align="left"}
+knitr::include_graphics("bed.jpg")
+```

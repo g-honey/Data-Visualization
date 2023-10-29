@@ -1,0 +1,79 @@
+---
+# title: "essay, one-paged-note, homework"
+# subtitle: "subtitle"
+# author: "심민규 `mksim@seoultech.ac.kr`"
+# date: "Lastly updated on `r Sys.Date()`"
+output:
+  pdf_document:
+    latex_engine: xelatex
+    highlight: haddock
+    keep_tex: yes
+    includes:
+      in_header: latex_support/latex-topmatter_pdf.tex
+    # toc: yes # table of contents yes/no/True/False
+    # toc_depth: 2 # toc depth 1 or 2 recommended
+    number_sections: yes # yes/no/True/False
+  html_document:
+    toc: yes
+    toc_depth: '1'
+    df_print: paged
+monofont: Courier New # Consolas or Courier New
+smaller: yes
+classoption: a4paper # letter or a4paper
+header-includes:
+- \usepackage{tikz}
+- \usepackage{pgfplots}
+- \pgfplotsset{compat=1.17}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(message = FALSE)
+knitr::opts_chunk$set(warning = FALSE)
+```
+
+<!-- \begin{center} -->
+<!-- \vspace{100pt} -->
+<!-- \includegraphics[height=0.3in]{latex_support/logo_ds.png}  -->
+<!-- \end{center} -->
+
+\begin{center}
+\begin{Large}
+비행기가 시간을 안지키는 이유는 뭘까?\\
+\end{Large}
+\begin{large}
+비행기의 연식과 연착의 관계
+\end{large}
+\end{center}
+\ 비행기의 연식과 연착의 관계가 있는지 확인해 보려고 한다. 그래프와 표를 비교해 봤을 때 결과적으로 **연식과 연착의 관계는 없다.**  
+\ 비행기 :   ♡ ♡ ^ \ \  ^ ♡ ♡  
+\ \ \ \ \ \ \ \ 　 + ♡ ( ⌯′-′⌯) ♡ +  
+\ \ \ \ \ \ \ \ ┏━♡━ U U━♡━┓  
+\ \ \ \ \ \ \ \ ♡　응 내 맘이야~　♡  
+\ \ \ \ \ \ \ \ ┗━♡━━━━♡━┛̥  
+
+
+\ 연식에 따른 출발지연과 도착지연의 값을 가중평균을 이용해 구해봤다. 
+\ 예를 들어 연식에 따른 평균 도착지연 시간과 비행기 수를 구한 표가 왼쪽과 같다면, 비행기 수/전체 비행기 수를 가중치로 둔다. 구한 가중치에 평균 도착지연을 곱해 가중평균을 만든다. 이렇게 만든 표는 오른쪽과 같다.
+```{r, out.height="18%", out.width="70%", fig.align="center"}
+knitr::include_graphics("가중평균 설명.png")
+```
+\ 가중평균으로 그린 그래프는 아래와 같다. 왼쪽은 출발지연 됐을 때의 가중평균으로 그린 그래프이고 오른쪽은 도착지연 됐을 때의 가중평균으로 그린 그래프이다. 
+```{r, out.height="46%", out.width="100%", fig.align="center"}
+knitr::include_graphics("연식-연착_가중평균.png")
+```
+\ 그래프만을 봤을 때 **연식과 연착과의 관계는 상관 관계가 없는 것으로 보인다.** 
+```{r, out.height="18%", out.width="90%", fig.align="center"}
+knitr::include_graphics("표로.jpg")
+```
+\ 위는 연식에 따른 출발지연 수를 30분 이하 일 때, 30분 초과~60분 이하 일 때, 60분 초과일 때로 나누어 표로 나타냈다. 연식이 늘어날 때 연착의 비율이 늘어나는 모습은 볼 수 없다. 그러므로 **연식과 연착의 관계는 상관 관계가 없다.**
+
+\newpage
+
+```{r, echo=TRUE, results='hide'}
+"Written by Choi, Ji-Hyeon"
+```
+
+```{r, out.height="10%", out.width="15%", fig.align="left"}
+knitr::include_graphics("bed.jpg")
+```

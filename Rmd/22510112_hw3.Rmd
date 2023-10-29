@@ -1,0 +1,79 @@
+---
+# title: "essay, one-paged-note, homework"
+# subtitle: "subtitle"
+# author: "심민규 `mksim@seoultech.ac.kr`"
+# date: "Lastly updated on `r Sys.Date()`"
+output:
+  pdf_document:
+    latex_engine: xelatex
+    highlight: haddock
+    keep_tex: yes
+    includes:
+      in_header: latex_support/latex-topmatter_pdf.tex
+    # toc: yes # table of contents yes/no/True/False
+    # toc_depth: 2 # toc depth 1 or 2 recommended
+    number_sections: yes # yes/no/True/False
+  html_document:
+    toc: yes
+    toc_depth: '1'
+    df_print: paged
+monofont: Courier New # Consolas or Courier New
+smaller: yes
+classoption: a4paper # letter or a4paper
+header-includes:
+- \usepackage{tikz}
+- \usepackage{pgfplots}
+- \pgfplotsset{compat=1.17}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(message = FALSE)
+knitr::opts_chunk$set(warning = FALSE)
+```
+
+<!-- \begin{center} -->
+<!-- \vspace{100pt} -->
+<!-- \includegraphics[height=0.3in]{latex_support/logo_ds.png}  -->
+<!-- \end{center} -->
+
+\begin{center}
+\begin{Large}
+중복되는 국가의 이름\\
+\end{Large}
+\begin{large}
+타이디한 데이터 세트 만들기
+\end{large}
+\end{center}
+\ 변수 설명을 보면 country는 국가 이름을 의미하고 iso2와 iso3는 국가 코드를 2자나 3자로 줄인 열 이다. 이는 국가를 **중복해서 지정하는 변수가 세 개**임을 의미한다. 따라서 **iso2와 iso3는 중복되고, 타이디한 데이터 세트를 만들기 위해서는 삭제해야 한다.**  
+
+
+\ 원래의 데이터 세트는 아래와 같은 모습을 보인다.
+```{r, out.height="20%", out.width="85%", fig.align="center"}
+knitr::include_graphics("who_데이터셋.png")
+```
+\ country는 나라 이름을 나타내고 iso2는 나라 이름의 맨 처음 앞글자 두 개를 값으로 사용하고 있다. iso3는 나라 이름의 맨 처음 앞글자 세 개를 값으로 이용하는 모습을 보인다. **iso2, iso3는 country와 중복되는 열을 의미하므로 삭제해야 한다. **  
+
+
+\ 원래의 데이터 세트는 타이디 하지 않은 모습을 보이고 있고 이를 타이디 데이터 세트로 최종적으로 가공하면 아래와 같은 데이터 세트를 가지게 된다.  
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 　　　　\ 　\*。☆    
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 　　　　　+;\':☆\*　중복 삭제!  
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 　　　　\'\`\+。;\*｜∧\  ∧　  
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 　　　\`\.\ ＊\*\ \ \  ∩\ ・ω・\ )　  
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 　　 ☆:+。:,　|　　,|  
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 　+\*:＊+\*''　\  し,ーＪ  
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\*:+\ . 。☆　   
+```{r, out.height="15%", out.width="80%", fig.align="center"}
+knitr::include_graphics("who_데이터셋_3.png")
+```
+\ 타이디한 데이터 세트는 **iso2, iso3가 지워진 모습**을 볼 수 있다.
+
+\newpage
+
+```{r, echo=TRUE, results='hide'}
+"Written by Choi, Ji-Hyeon"
+```
+
+```{r, out.height="10%", out.width="15%", fig.align="left"}
+knitr::include_graphics("bed.jpg")
+```
